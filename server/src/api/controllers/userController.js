@@ -8,14 +8,26 @@ const { HTTPError, handleHTTPError } = require('../../utils');
 Get all users
 */
 const getUsers = (req, res, next) => {
-  handleHTTPError(new HTTPError('The action method is not yet implemented!', 501), next);
+  try {
+    const users = dataService.getUsers();
+    res.status(200).json(users)
+  } catch (error) {
+    handleHTTPError(error, next);
+  }
 };
 
 /*
 Get a specific user
 */
 const getUserById = (req, res, next) => {
-  handleHTTPError(new HTTPError('The action method is not yet implemented!', 501), next);
+  const {userId} = req.params;
+  
+  try {
+    const users = dataService.getUserById(userId);
+    res.status(200).json(users)
+  } catch (error) {
+    handleHTTPError(error, next);
+  }
 };
 
 /*

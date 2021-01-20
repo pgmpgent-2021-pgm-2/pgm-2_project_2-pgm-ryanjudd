@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+header {
+  max-width: 100%;
+  padding-bottom: 5rem;
+  background-color: #aeaeae;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+}
+
+main article {
+  width: 20%;
+  border-right: .1rem solid;
+  border-bottom: .1rem solid;
+}
+
+main article:nth-child(3) {
+  width: 40%;
+}
